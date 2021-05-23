@@ -1,0 +1,171 @@
+/* IMPORTANT: The menu is just to emulate the current behaviour of the app, since I don't have access to the source code. What's important here are the styles below the "OPTIMIZATIONS" note*/
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.btn {
+  padding: 8px 14px !important;
+}
+
+.col-xs-12 {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#sidebar-wrapper{
+  z-index:1;
+  position: absolute;
+  width:0;
+  height:100%;
+  overflow-y:hidden;
+  background: #14191B;
+  opacity:0.9;
+	transition:all .5s;
+	display:flex;
+  align-items: flex-start;
+}
+
+#page-content-wrapper{
+  width: 100%;	
+  position: absolute;
+/*padding:15px;*/
+	transition:all .5s;
+}
+
+#menu-toggle{
+	transition:all .3s;
+}
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+  width:250px;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper{
+  padding-left:250px;
+}
+
+.sidebar-nav{
+  padding:0;
+  list-style:none; 
+	transition:all .5s;
+	width:100%;
+	text-align:left;
+}
+
+.sidebar-nav li{
+  line-height:35px;  
+	width:100%;
+	transition:all .3s;
+	padding:10px 10px 10px 20px;
+}
+
+.sidebar-nav li a {
+  display:block;
+  text-decoration:none;
+  color:#ddd;
+}
+
+.sidebar-nav-item:hover{
+  background:#1C3736;
+}
+
+.bg-green {
+  background:#00a750;
+  text-align: center;
+}
+
+/* OPTIMIZATIONS */
+.bg-dark {
+  background-color: #14191b;
+}
+
+.bg-light .header-row .header-section {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.bg-light.lt, .bg-light .lt {
+  background-color: #e8f3f0;
+}
+
+.page-title-bar .header-title {
+  line-height: 1.33em!important;
+}
+
+.infobar {
+  background-color: #1C3736;
+  color: #fff;
+  padding: 3px 15px 3px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.header-section h1 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.text-green {
+  color: #00a750;
+}
+
+.text-muted {
+  color: #41535a;
+}
+
+.infobar .infobar-item {
+  flex: 1 1 auto;
+  text-align: left;
+  margin: 0 5px 0 0;
+  display: block;
+}
+
+.infobar .infobar-item.infobar-item-header h5.infobar-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.infobar .infobar-item p {
+  margin-bottom: 0;
+  line-height: 1.3em;
+  font-weight: 400;
+  display: block;
+  font-size: 16px;
+}
+
+.infobar .infobar-item h5 {
+  color: #82EAB4;
+  font-weight: 400;
+  display: inline;
+  margin: 0;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+  
+}
+
+@media screen and (max-width: 479px) {
+/* start of phone styles */
+
+.infobar .infobar-item p {
+  font-size: 14px;
+}
+
+.infobar .infobar-item.infobar-item-header h5.infobar-label {
+  font-size: 14px;
+}
+
+}
