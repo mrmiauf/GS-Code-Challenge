@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="menu-toggler.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="bg-green"><img src="images/gs-logo.png"/></li>
+          <li class="sidebar-nav-item"><a href="#">Dashboard</a></li>
+          <li class="sidebar-nav-item"><a href="#">Budget Tracking</a></li>
+        </ul>
+      </div>
+      
+      <!-- Page Header -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <a href="#" class="btn" id="menu-toggle"><img src="images/menu-icon.png"/></a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="nav-icon" src="images/📍 icon-3.png"/>Melissa Urena</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="#">Manage Signature</a></li>
+                        <li><a href="#">Email Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/📍 icon-2.png"/></span></a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/📍 icon-1.png"/></span></a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/📍 icon.png"/></span></a>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Sincere Larch | 0 Project Beta">
+                </form>
+              </div>
+              <!--Chart Of Accounts-->
+              <div class="bg-light lt b-b wrapper-md page-title-bar">
+                <div class="row">
+                    <div class="col-xs-12 header-row">
+                        <div class="header-section">
+                          <h1 class="text-green header-title">Chart Of Accounts</h1>
+                          <div class="text-muted header-subtitle">View accounts and posted transactions.</div>
+                        </div>
+                        <div class="header-section button-wrapper">
+                            <a class="pull-right btn-header m-l-sm headerBtn  btn btn-default " data-bind="events: { click: OnOpenLinkAsModalClick }, attr: { data-modalcustomclass: modalXLCompact }, visible:IsAddAccountVisible" href="#/chartOfAccounts/create" text-content-id="ChartOfAccounts.AddAccount" data-modalcustomclass="modal-xl-compact" style="display: none;"><span class="glyphicon glyphicon-plus"></span> Add Account</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!--Infobar - Cost Report Totals-->
+              <div class="infobar">
+                
+                  <div class="infobar-item infobar-item-header" data-bind="">
+                    <h5 class="infobar-label">Cost Report Totals</h5>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">Actual Cost:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.ActualCost" data-format="#,0.00;(#,0.00)">2,020.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">POs:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.PurchaseOrderCost" data-format="#,0.00;(#,0.00)">0.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">Total Cost:</h5>
+                      <p class="infobar-item-field" data-bind="text: Header.TotalCost" data-format="#,0.00;(#,0.00)">2,020.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">ETC:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.EstimationToCompletion" data-format="#,0.00;(#,0.00)">236,225.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">EFC:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.EstimatedFinalCost" data-format="#,0.00;(#,0.00)">238,245.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">Budget:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.Budget" data-format="#,0.00;(#,0.00)">240,145.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">App Overage:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.ApprovedOverage" data-format="#,0.00;(#,0.00)">0.00</p>
+                  </div>
+
+                  <div class="infobar-item" data-bind="">
+                    <h5 class="infobar-item-label">Variance:</h5>
+                    <p class="infobar-item-field" data-bind="text: Header.Variance" data-format="#,0.00;(#,0.00)">1,900.00</p>
+                  </div>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</body>
